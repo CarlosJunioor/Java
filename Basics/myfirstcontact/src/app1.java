@@ -1,26 +1,40 @@
 import java.util.Scanner;
 public class app1 {
-    public static void main(String[] args) throws Exception {
-       System.out.println("Qual sera o exercicio?");
 
-       Scanner scanner = new Scanner (System.in);
-       int var = 0;
-       String input = scanner.next();
-       int answer = Integer.parseInt(input);
+    public static void third(){
+        System.out.println("terceiro ex");
 
-       do{
-        input = scanner.next();
-        answer = Integer.parseInt(input);
-        var = answer;
-
-    switch (var) {
-        case 1:
-        System.out.println("Exercicio 1");
-        break;
-
-        case 2:
-        System.out.print("Exercicio 2");
-        break;
     }
-    } while (var==1 || var == 2);}}
 
+    public static void second(){
+       
+        String res;
+        do{
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Quantas polegadas tem a sua TV?");
+        double num = sc.nextInt();
+        num = num * 24.5;
+        System.out.println("A sua TV tem "+num+" milimetros.");
+
+        System.out.println("Deseja voltar ao menu?[s/n]");
+        res = sc.next();
+        System.out.println(res);
+        
+        } while (res == "n" );
+        main(null);
+}
+
+    public static void main(String[] args) {
+        String resultadoMain ;
+        
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("menu/exe1/exe2: Ola, qual seria o exercicio?");
+        resultadoMain = scan.next();
+    
+        second();
+
+        
+
+    }
+}
