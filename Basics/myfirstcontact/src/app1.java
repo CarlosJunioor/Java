@@ -3,38 +3,33 @@ public class app1 {
 
     public static void third(){
         System.out.println("terceiro ex");
-
     }
 
     public static void second(){
-       
-        String res;
-        do{
-        Scanner sc = new Scanner (System.in);
+    
+       String resposta = null;
+       Scanner sc = new Scanner (System.in);
+
+    do { 
         System.out.println("Quantas polegadas tem a sua TV?");
-        double num = sc.nextInt();
+        double num = sc.nextDouble();
+        
         num = num * 24.5;
         System.out.println("A sua TV tem "+num+" milimetros.");
 
-        System.out.println("Deseja voltar ao menu?[s/n]");
-        res = sc.next();
-        System.out.println(res);
-        
-        } while (res == "n" );
-        main(null);
-}
+        System.out.println("Deseja voltar a fazer?");
+        resposta = sc.nextLine();
+        System.out.println(resposta);
 
-    public static void main(String[] args) {
-        String resultadoMain ;
-        
+       }while (resposta !="s");
 
-        Scanner scan = new Scanner(System.in);
-        System.out.println("menu/exe1/exe2: Ola, qual seria o exercicio?");
-        resultadoMain = scan.next();
+    }
+
     
+
+    
+    public static void main(String[] args) {
+        System.out.println("menu/exe1/exe2: Ola, qual seria o exercicio?");
         second();
-
-        
-
     }
 }
